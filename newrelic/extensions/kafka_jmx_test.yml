@@ -1,0 +1,14 @@
+name: KafkaJmx
+version: 1.0
+enabled: true
+jmx:
+  - object_name: "kafka.controller:type=KafkaController,name=ActiveControllerCount"
+    metrics:
+      - attributes: Value
+  - object_name: "kafka.controller:type=KafkaController,name=OfflinePartitionsCount"
+    metrics:
+      - attributes: Value
+  - object_name: "kafka.controller:name=LeaderElectionRateAndTimeMs,type=ControllerStats"
+    metrics:
+      - attributes: 50thPercentile, Mean, StdDev, 75thPercentile, 95thPercentile, 98thPercentile, 99thPercentile, 999thPercentile, Count, Min, Max
+

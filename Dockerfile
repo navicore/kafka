@@ -20,5 +20,8 @@ WORKDIR /kafka
 COPY config/server.properties /kafka/config/server.properties
 COPY run.sh /run.sh
 
+COPY bin/kafka-run-class.sh /kafka/bin/kafka-run-class.sh
+COPY newrelic /kafka/newrelic
+
 CMD /run.sh
 
